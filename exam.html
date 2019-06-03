@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>建发房产首届科举考试</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="font/font.css">
+<link rel="stylesheet" href="css/css.css">
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/js.js"></script>
+</head>
+
+<body>
+<div class="page">
+	<div class="container">
+		<div class="exam">
+			<img src="images/logo.png" alt=""/>
+			<div class="top">
+				<div class="h">解试</div>
+				<div class="timer"><span id="ss">60</span>s</div>
+			</div>
+			<div class="question">
+				<div class="title">建发匠造，大美中式，以下这张图片是哪个项？</div>
+				<div class="pic"><img src="images/pic.jpg"/></div>
+			</div>
+			<ul class="answer">
+				<li>A. 上海央玺</li>
+				<li>B. 合肥雍龙府</li>
+				<li>C. 厦门央玺</li>
+			</ul>
+			<div class="btn_confirm"><img src="images/btn_confirm.png" onclick="dialog('#right'); stop();"/></div>
+		</div>
+	</div>
+</div>
+
+<!--弹窗 答对-->
+<div class="dialog" id="right">
+	<div class="inner">
+		<div class="box">
+			<div class="title">回答正确</div>
+			<div class="desc"><p>腹有诗书气自华</p></div>
+			<div class="btn_confirm"><a href="win.html"><img src="images/btn_next.png"/></a></div>
+		</div>
+	</div>
+</div>
+
+<!--弹窗 答错-->
+<div class="dialog" id="wrong">
+	<div class="inner">
+		<div class="box">
+			<div class="title" style="color: #000;">答错了</div>
+			<div class="desc"><p>正确答案是<br>A.儒门道园，唐风华纹</p></div>
+			<div class="btn_confirm"><a href="fail.html"><img src="images/btn_end.png"/></a></div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+//答案选中active效果
+$(".answer li").click(function(){
+	$(this).siblings().removeClass("active");
+	$(this).addClass("active");
+})
+
+//倒计时60秒
+var ss = 60 
+var timer=setInterval("clock()",1000);
+function clock(){
+	ss>0 ? ss-- : fail();
+	$("#ss").text(ss);
+}
+function fail(){ //时间到答题失败
+	clearInterval(timer);
+	dialog("#wrong");
+}
+
+function stop(){ //停止倒计时
+	clearInterval(timer);
+}
+</script>
+</body>
+</html>

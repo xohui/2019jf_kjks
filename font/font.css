@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'kaiti';
+	src: url('kaiti.eot');
+	src:
+		url('kaiti.eot?#font-spider') format('embedded-opentype'),
+		url('kaiti.woff2') format('woff2'),
+		url('kaiti.woff') format('woff'),
+		url('kaiti.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'xingkai';
+	src: url('xingkai.eot');
+	src:
+		url('xingkai.eot?#font-spider') format('embedded-opentype'),
+		url('xingkai.woff2') format('woff2'),
+		url('xingkai.woff') format('woff'),
+		url('xingkai.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'shufa';
+	src: url('shufa.eot');
+	src:
+		url('shufa.eot?#font-spider') format('embedded-opentype'),
+		url('shufa.woff2') format('woff2'),
+		url('shufa.woff') format('woff'),
+		url('shufa.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.font1 { font-family: 'kaiti';}
+.font2 { font-family: 'xingkai';} 
+.font3 { font-family: 'shufa';} 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>建发房产首届科举考试</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="font/font.css">
+<link rel="stylesheet" href="css/css.css">
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/js.js"></script>
+</head>
+
+<body>
+<div class="page">
+	<div class="container">
+		<div class="difficulty">
+			<img src="images/logo.png" alt=""/>
+			<div class="top">
+				<div class="point">累计成绩：<span>150</span></div>
+				<div class="btn_cash-out"><img src="images/btn_cash-out.png"/></div>
+			</div>
+			<div class="title">请选择考试难度</div>
+			<ul class="d_select">
+				<li class="d1 active"></li>
+				<li class="d2"></li>
+				<li class="d3"></li>
+			</ul>
+			<div class="count">您当前有 <span>5</span> 次答题机会</div>
+			<ul class="btns">
+				<li><a href="exam.html"><img src="images/btn_start.png"/></a></li>
+				<li><a href="rule.html"><img src="images/btn_rule.png"/></a></li>
+				<li><a href="rank.html"><img src="images/btn_rank.png"/></a></li>
+			</ul>
+			<img src="images/btn_tricks.png" class="btn_tricks" />
+		</div>
+	</div>
+</div>
+
+
+<!--弹窗 信息登记-->
+<div class="dialog" id="reg">
+	<div class="inner">
+		<div class="reg">
+			<div class="title">准考证</div>
+			<div class="ipt_text">姓名 <label><input type="text"></label></div>
+			<div class="ipt_text">电话 <label><input type="num"></label></div>
+			<div class="desc">重要获奖凭证，请正确填写</div>
+			<div class="btn_confirm"><img src="images/btn_confirm.png" onclick="dialogClose('#reg')"/></div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+//难度等级选中active效果
+$(".d_select li").click(function(){
+	$(this).siblings().removeClass("active");
+	$(this).addClass("active");
+})
+
+//弹窗信息登记
+dialog("#reg");
+</script>
+</body>
+</html>

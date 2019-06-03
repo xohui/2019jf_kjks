@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>建发房产首届科举考试</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="font/font.css">
+<link rel="stylesheet" href="css/css.css">
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/js.js"></script>
+</head>
+
+<body>
+<div class="page">
+	<div class="container">
+		<div class="points">
+			<img src="images/logo.png" alt=""/>
+			<div class="top">
+				<div class="h"><span style="color:#b23c34">逆天！<br>全答对卷</span></div>
+			</div>
+			<ul class="statistics">
+				<li class="total">本轮答题共10道</li>
+				<li class="reply">回答正确：10道</li>
+				<li class="score">总分：50分</li>
+			</ul>
+			<li class="btn_home"><img src="images/btn_lottery.png" onclick="dialog('#lottery_1')"/></li>
+		</div>
+	</div>
+</div>
+
+<!--抽奖弹窗1 文曲星-->
+<div class="dialog" id="lottery_1">
+	<div class="inner">
+		<div class="box">
+			<div class="title">文曲星</div>
+			<div class="desc"><p>有如神助<br>个人总成绩<br>增加<span>100</span>分</p></div>
+			<div class="btn_confirm"><a href="poster.html"><img src="images/btn_confirm.png"/></a></div>
+		</div>
+	</div>
+</div>
+
+<!--抽奖弹窗2 手气不错-->
+<div class="dialog" id="lottery_2">
+	<div class="inner">
+		<div class="box">
+			<div class="title">手气不错</div>
+			<div class="desc"><p>吉人天相<br>个人总成绩<br>增加<span>10</span>分</p></div>
+			<div class="btn_confirm"><img src="images/btn_confirm.png" onclick="dialogClose('#lottery_2')"/></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

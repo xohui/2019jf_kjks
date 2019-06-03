@@ -1,0 +1,38 @@
+* { box-sizing:border-box; font:inherit;}
+body,
+dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, textarea,
+p, blockquote, th, td, hr, button,
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  margin:0;
+  padding:0;
+  border:0;
+	outline: 0;
+	vertical-align: baseline;
+}
+ul, ol, li {list-style: none;}
+table {border-collapse:collapse; border-spacing:0;}
+a {text-decoration:none; outline:none; -webkit-tap-highlight-color: transparent;}/* 默认不要下划线 */
+img { max-width:100%; border:none; vertical-align:middle;}
+img:not([src]),img[src=""] {opacity:0;}/* 加载不出来的图片不要显示灰色边框 */
+
+input, select, button, textarea { -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+input[type="button"], input[type="submit"], input[type="reset"], input[type="date"], button { -webkit-appearance: none;  user-select:none;}
+::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none !important;  margin: 0;}
+::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #ccc;}
+::-webkit-search-cancel-button,
+::-webkit-clear-button,
+::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator {display: none;}
+
+html, body {width:100%; height:100%; margin:0 auto; font-family: 'sans-serif', "Microsoft YaHei", "Tahoma", "Helvetica"; -webkit-text-size-adjust:100%;}
+
+html{ font-size:calc(100vw/3.75); position:relative;}/*--100vw是设备的宽度，除以3.75可以让1rem的大小在iPhone6下等于100px--*/
+body{ font-size:0.14rem; line-height:1.5;}
+
+.disabled { pointer-events: none; }
+
+@media screen and (min-width:751px){
+	html{ font-size:128px; width:480px !important;}
+}}
